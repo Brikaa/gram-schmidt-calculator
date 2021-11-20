@@ -28,7 +28,7 @@
         for (let i = 1; i <= current_vector; ++i) {
             const op = gram_vectors[current_vector - i];
             value = math.evaluate(
-                `${value} - (${math.dot(op, base)} / ${math.dot(op, op)}) * ${op}`
+                `${value} - ((${math.dot(op, base)}) / (${math.dot(op, op)})) * ${op}`
             );
         }
         return value;
